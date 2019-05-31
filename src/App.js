@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Forms from './Components/Forms';
+import Results from './Components/Results';
 import axios from 'axios';
 
 class App extends Component {
@@ -7,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      cuisineData: [],
+      searchResults: [],
     }
   }
   //fetch all cuisine array 
@@ -55,7 +57,7 @@ class App extends Component {
           q: cuisine //cuisine id obtained from first api
         }
       })
-      console.log(searchResults);
+      // console.log(searchResults);
       this.setState({
         searchResults: searchResults.data.restaurants
       })
@@ -73,6 +75,8 @@ class App extends Component {
     return (
       <main>
         <Forms getRestaurants={this.typeCuisine} /> 
+        {this.state.searchResults.length === 0 ? <p>Try Searching</p> : <Results searchResults={this.state.searchResults} />}
+        {/* <Results searchResults={this.state.searchResults} /> */}
       </main>
     );
   }
