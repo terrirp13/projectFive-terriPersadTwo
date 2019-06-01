@@ -10,10 +10,15 @@ class Results extends Component{
             
             {this.props.searchResults.map(restaurant => {
                 return(
-                    <div>
+                    <div key={restaurant.restaurant.id}>
+                        <img src={restaurant.restaurant.featured_image} alt={restaurant.restaurant.name} />
+                    <h1>Name: {restaurant.restaurant.name}</h1>
+                        <p>{restaurant.restaurant.cuisines}</p>
+                        <p>{restaurant.restaurant.location.address}</p>
                     <p>{restaurant.restaurant.cuisines}</p>
-                    <p>restaurant.location.name}</p>
-                    </div>
+                    <p>{restaurant.restaurant.currency}</p>
+                       
+                </div>
                 )
             })}
            
