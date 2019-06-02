@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Forms from './Components/Forms';
 import Results from './Components/Results';
+// import yummylogo from './yummylogo.svg';
+import './App.css';
 import axios from 'axios';
 
 class App extends Component {
@@ -18,27 +20,27 @@ class App extends Component {
   //cuisine name id that matches the name 
   //plug into search with location id
 
-  async fetchCuisineDetails() {
-    try {
-      const cuisineData = await axios({
-        url: `https://developers.zomato.com/api/v2.1/cuisines`,
-        method: 'GET',
-        dataType: 'json',
-        headers: {
-          'user-key': '0968faa2918c801deb6840af027c61de'
-        },
-        params: {
-          city_id: 89,
-        }
-      })
+  // async fetchCuisineDetails() {
+  //   try {
+  //     const cuisineData = await axios({
+  //       url: `https://developers.zomato.com/api/v2.1/cuisines`,
+  //       method: 'GET',
+  //       dataType: 'json',
+  //       headers: {
+  //         'user-key': '0968faa2918c801deb6840af027c61de'
+  //       },
+  //       params: {
+  //         city_id: 89,
+  //       }
+  //     })
 
-      this.setState({
-        cuisineData: cuisineData.data.cuisines //gave full array of cuisines
-      })
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
+  //     this.setState({
+  //       cuisineData: cuisineData.data.cuisines //gave full array of cuisines
+  //     })
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // }
 
   //function to trigger when user submit. this was then pushed to forms component below. this gave us cuisine id
   typeCuisine = async (cuisine) => {
@@ -67,17 +69,28 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    this.fetchCuisineDetails();
-  }
+  // componentDidMount() {
+  //   this.fetchCuisineDetails();
+  // }
 
   render() {
     return (
-      <main>
-        <Forms getRestaurants={this.typeCuisine} /> 
-        {this.state.searchResults.length === 0 ? <p>Try Searching</p> : <Results searchResults={this.state.searchResults} />}
-        {/* <Results searchResults={this.state.searchResults} /> */}
-      </main>
+      <div>
+        <header className="App-header"> 
+          {/* <div className=" Head Wrapper"> */}
+          <h1>yummy tummy</h1>
+              {/* <img src={yummylogo} className="Logo" alt="Yummy Tummy logo" /> */}
+              <p>Search by Cuisine for Restaurants in Toronto, Ontario</p>
+          {/* </div> */}
+              <Forms getRestaurants={this.typeCuisine} />
+           
+        </header>
+        <main>
+          {/* <Forms getRestaurants={this.typeCuisine} />  */}
+          {this.state.searchResults.length === 0 ? '' : <Results searchResults={this.state.searchResults} />}
+          {/* <Results searchResults={this.state.searchResults} /> */}
+        </main>
+      </div>
     );
   }
 }

@@ -1,4 +1,6 @@
-.App {
+
+
+/* .App {
   text-align: center;
 }
 
@@ -6,28 +8,101 @@
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
+} */
+html{
+  font-size: 125%;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: #cbbfbf;
+}
+h1, h2, h3, h4, a, button, p, ul, li {
+  margin: 0;
+  padding: 0;
+
+}
+h1{
+  font-family: 'Ribeye', cursive;
+  text-transform: uppercase;
+  font-size: 5.8rem;
+  color: #157b3b;
+  text-shadow: 2px 2px  #F68929;
+
+}
+h2, h3, h4, p, button, a {
+    font-family: 'Ribeye', cursive;
+    font-family: 'Raleway', sans-serif;
+}
+
+.Wrapper{
+  width:  1240px;
+  max-width: 80%;;
+  min-width: 320px;
+  margin: 0 auto;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url('./sky.svg');
   min-height: 100vh;
+  /* width: 100vw; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
+.Logo{
+  width: 100%;
+}
+.Form-header{
+display: flex;
+justify-content: center;
 
-.App-link {
-  color: #61dafb;
+} 
+.Input{
+  width: 40%;
+  margin: 10px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+   width: 20%;
+  margin: 10px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background: #F68929;
+  color: #157b3b;
+ 
+}
+button:hover{
+  background:#157b3b ;
+  color: #F68929;
+   box-shadow: 2px 3px 2px 2px rgba(0,0,0,0.5);
+}
+::placeholder{
+  text-align: center;
+}
+.Results {
+  background:#b5cadf;
+  margin: 10px;
+  border-radius: 10px;
+  /* display: flex; */
+}
+
+.Results img {
+  width: 20%;
+}
+.Title-rating{
+display: flex;
+justify-content: space-between;
 }
