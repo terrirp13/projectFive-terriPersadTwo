@@ -13,26 +13,52 @@ html{
   font-size: 125%;
   padding: 0;
   margin: 0;
+  font-family: 'Ribeye', cursive;
+    font-family: 'Raleway', sans-serif;
 }
 body{
-  background: #cbbfbf;
+  background:#7eb9bd;
 }
 h1, h2, h3, h4, a, button, p, ul, li {
   margin: 0;
   padding: 0;
+  
+  
 
 }
 h1{
   font-family: 'Ribeye', cursive;
   text-transform: uppercase;
+  text-align: center;
   font-size: 5.8rem;
   color: #157b3b;
   text-shadow: 2px 2px  #F68929;
-
 }
-h2, h3, h4, p, button, a {
-    font-family: 'Ribeye', cursive;
-    font-family: 'Raleway', sans-serif;
+h2{
+   font-family: 'Ribeye', cursive;
+  text-transform: capitalize;
+  font-size: 3rem;
+  text-align: center;
+  color:navy;
+  text-shadow:  2px 2px  #F68929;
+}
+
+h3{
+   font-family: 'Raleway', sans-serif;
+   font-size: 1rem;
+    width: calc(70% - 10px);
+    color: #157b3b;
+    /* margin: 10px; */
+}
+p{
+  font-family: 'Raleway', sans-serif;
+   font-size: .8rem;
+}
+a {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: 700;
 }
 
 .Wrapper{
@@ -74,7 +100,7 @@ justify-content: center;
   text-align: center;
 }
 
-button {
+button{
    width: 20%;
   margin: 10px;
   height: 40px;
@@ -82,27 +108,66 @@ button {
   border: none;
   background: #F68929;
   color: #157b3b;
- 
 }
+
 button:hover{
   background:#157b3b ;
   color: #F68929;
    box-shadow: 2px 3px 2px 2px rgba(0,0,0,0.5);
 }
+
 ::placeholder{
   text-align: center;
+  color: #157b3b;
 }
+
+.Search {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
 .Results {
   background:#b5cadf;
   margin: 10px;
   border-radius: 10px;
-  /* display: flex; */
-}
-
-.Results img {
-  width: 20%;
+  width: calc(100% /3 - 20px);
+ position: relative;
 }
 .Title-rating{
 display: flex;
 justify-content: space-between;
+margin: 10px;
+}
+
+.Details {
+  margin: 0 5px;
+  margin-bottom: 60px;
+
+}
+.Type{
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.Info-button{
+margin: 10px auto;
+position: absolute;
+left: 50%;
+bottom:0%;
+transform: translate(-50%, -0%);
+}
+.Cost {
+  padding: 10px 0;
+  color: navy;
+}
+.Results-title h2{
+  text-align: center;
+}
+.Man{
+  position: absolute;
+  width: 30%;
+ left:15px;
+ bottom: 0%;
+
 }

@@ -6,32 +6,33 @@ class Results extends Component{
     render() {
         console.log(this.props);
         return (
-            <div>Your Restaurant Search
-            
+            <div className="Wrapper">
+            <h2 className="Results-title">Your Restaurant Search Results</h2>
+            <div className="Search" id="search"> 
             {this.props.searchResults.map(restaurant => {
                 return(
-                   
+                
                  <div className="Results Wrapper" key={restaurant.restaurant.id}>
                      <div className="Title-rating">
-                         <h2>{restaurant.restaurant.name}</h2>
+                         <h3>{restaurant.restaurant.name}</h3>
                         <p>Rating: {restaurant.restaurant.user_rating.aggregate_rating}</p>
                      </div>
-                     <div className="Image-details">
-                        <div>
-                            <img src={restaurant.restaurant.featured_image} alt={restaurant.restaurant.name} />
-                        </div>
-                        <div>
-                            <p>{restaurant.restaurant.cuisines}</p>
+                     
+                        <div className="Details">
+                            <p className="Type">{restaurant.restaurant.cuisines}</p>
                             <p>{restaurant.restaurant.location.address}</p>
-                            <p>Average Cost for Two: ${restaurant.restaurant.average_cost_for_two}</p>
-                            <p>Rating: {restaurant.restaurant.user_rating.aggregate_rating}</p>
-                         </div>
-                     </div>
+                            <p className="Cost">Average Cost for Two: ${restaurant.restaurant.average_cost_for_two}</p>
+                            <button className="Info-button"><a href={restaurant.restaurant.url}>More Info</a></button>
+                         </div> 
+                        
+                    
                 </div>
-                
-                )
-            })}
-           
+             
+                              
+                              )
+                          })}
+                         
+            </div>
             </div>
         );
     }
