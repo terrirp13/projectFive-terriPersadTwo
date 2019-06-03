@@ -18,12 +18,14 @@ html{
 }
 body{
   background:#7eb9bd;
+  background-image: url('./food.svg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 h1, h2, h3, h4, a, button, p, ul, li {
   margin: 0;
   padding: 0;
-  
-  
 
 }
 h1{
@@ -50,7 +52,7 @@ h3{
     color: #157b3b;
     /* margin: 10px; */
 }
-p{
+p, button{
   font-family: 'Raleway', sans-serif;
    font-size: .8rem;
 }
@@ -100,7 +102,7 @@ justify-content: center;
   text-align: center;
 }
 
-button{
+form button{
    width: 20%;
   margin: 10px;
   height: 40px;
@@ -108,6 +110,7 @@ button{
   border: none;
   background: #F68929;
   color: #157b3b;
+  font-size: 70%;
 }
 
 button:hover{
@@ -119,6 +122,11 @@ button:hover{
 ::placeholder{
   text-align: center;
   color: #157b3b;
+  font-size: 1rem;
+}
+input[type="text"]{
+    font-size:70%;
+    color: #157b3b;
 }
 
 .Search {
@@ -152,6 +160,12 @@ margin: 10px;
 }
 .Info-button{
 margin: 10px auto;
+padding: 5px 20px;
+border-radius: 10px;
+background: #F68929;
+color: #157b3b;
+border: none;
+font-size: 80%;
 position: absolute;
 left: 50%;
 bottom:0%;
@@ -170,4 +184,81 @@ transform: translate(-50%, -0%);
  left:15px;
  bottom: 0%;
 
+}
+.Top{
+  text-align: right;
+  margin-bottom: 20px;
+}
+.Icon{
+  margin-left: 10px; 
+
+}
+@media (max-width: 1300px){
+  h2{
+    font-size: 2.3rem;
+  }
+  .Results{
+    width: calc(100% /2 - 20px);
+  }
+  .Details{
+    text-align: center;
+  }
+
+}
+@media (max-width: 1150px) {
+  h1{
+    font-size: 5rem;
+  }
+}
+@media (max-width: 950px){
+  h1{
+    font-size: 4.2rem;
+  }
+  .Man{
+    width: 35%;
+  }
+}
+@media (max-width: 850px){
+  .Results{
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+   h2{
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 750px){
+  h1{
+    font-size: 3rem;
+  }
+  .Input{
+    width: 60%;
+  }
+  form button {
+    width: 40%;
+  }
+  header p{
+   font-size: .7rem;
+   padding: 15px;
+   text-align: center;
+  }
+   .Man{
+    width: 45%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+@media (max-width: 550px){
+  h1{
+    font-size: 2.5rem;
+  }
+  .Input{
+    width: 70%;
+    height: 30px;
+  }
+  form button {
+    width: 30%;
+    height: 30px;
+    font-size: 50%;
+  }
 }

@@ -14,8 +14,8 @@ class Results extends Component{
         console.log(this.props);
         return (
          <div className="Wrapper">
-            <h2 className="Results-title">Your Restaurant Search Results</h2>
-            <div className="Search" id="search"> 
+                <h2 className="Results-title" id="search">Your Restaurant Search Results</h2>
+            <div className="Search" > 
 
             {this.props.searchResults.map(restaurant => {
                 return(
@@ -32,8 +32,6 @@ class Results extends Component{
                         <p className="Cost">Average Cost for Two: ${restaurant.restaurant.average_cost_for_two}</p>
                         <button className="Info-button"><a href={restaurant.restaurant.url}>More Info</a></button>
                      </div> 
-                    
-                    
                 </div>
              
                               
@@ -41,6 +39,7 @@ class Results extends Component{
                           })}
                          
             </div>
+                <div className="Top"><a href="#input">New Search <span className="Icon">< i className="fas fa-arrow-up"></i></span> </a></div>
          </div>
         );
     }

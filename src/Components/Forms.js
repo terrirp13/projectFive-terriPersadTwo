@@ -31,7 +31,7 @@ class Forms extends Component {
     render() {
         return (
             <form className="Form-header Wrapper" onSubmit={this.handleSubmit}>
-                <input className="Input" type="text" onChange={this.change} name="cuisine" value={this.state.input} placeholder="cuisine type" />
+                <input className="Input" type="text" onChange={this.change} name="cuisine" id="input" value={this.state.input} placeholder="cuisine type" />
                 <button>Get restaurants</button>
             </form>
         );
