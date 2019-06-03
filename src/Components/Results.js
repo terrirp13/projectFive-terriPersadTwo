@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from './Footer';
 
 class Results extends Component{
 
@@ -13,6 +14,7 @@ class Results extends Component{
     render() {
         console.log(this.props);
         return (
+     <div>
          <div className="Wrapper">
                 <h2 className="Results-title" id="search">Your Restaurant Search Results</h2>
             <div className="Search" > 
@@ -33,15 +35,18 @@ class Results extends Component{
                         <button className="Info-button"><a href={restaurant.restaurant.url}>More Info</a></button>
                      </div> 
                 </div>
-             
-                              
                               )
                           })}
                          
             </div>
                 <div className="Top"><a href="#input">New Search <span className="Icon">< i className="fas fa-arrow-up"></i></span> </a></div>
+               
          </div>
+      <Footer/>
+     </div>
+         
         );
+       
     }
 };
 

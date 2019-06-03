@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Forms from './Components/Forms';
 import Results from './Components/Results';
+// import Footer from './Components/Footer';
 import manfood from './manfood.svg';
 import './App.css';
 import axios from 'axios';
@@ -57,6 +58,7 @@ class App extends Component {
               {this.state.searchResults.length === 0 ? '' : <Results searchResults={this.state.searchResults} />}
             
           </main>
+        
       </div>
     );
   }
