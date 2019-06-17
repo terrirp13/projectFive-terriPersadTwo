@@ -48,7 +48,7 @@ class App extends Component {
       <div>
         <header className="App-header"> 
           <h1>yummy tummy</h1>
-          <p>Enter a type of Cuisine to find Restaurats in Greater Toronto and neighbouring locations.</p>
+          <p>Enter a type of Cuisine to find Restaurants in Greater Toronto and neighbouring locations.</p>
               <img src={manfood} className="Man" alt="Man with food" />
               <Forms getRestaurants={this.typeCuisine} />
            

@@ -32,7 +32,7 @@ class Forms extends Component {
         return (
             <form className="Form-header Wrapper" onSubmit={this.handleSubmit}>
                 <input className="Input" type="text" onChange={this.change} name="cuisine" id="input" value={this.state.input} placeholder="cuisine type" />
-                <button>Get restaurants</button>
+                <button disabled={this.state.input === '' ? true : false}>Get restaurants</button>
             </form>
         );
     }
